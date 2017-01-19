@@ -1382,136 +1382,136 @@ pre.info {
  * Custom overrides for bugs.php.net
  **********************************/
 .footer-utc {
-    float: right;
-    font-style: italic;  
+  float: right;
+  font-style: italic;  
 }
 
 .report-bug-form th {
-    background: #E6E6E6;
-    text-align: right;
-    width: 25%;
+  background: #E6E6E6;
+  text-align: right;
+  width: 25%;
 }
 
 .report-bug-form th.buttons {
-    text-align: center;
-    width: 100%;
+  text-align: center;
+  width: 100%;
 }
 
 .report-bug-form small {
-    font-size: 0.9rem;
+  font-size: 0.9rem;
 }
 
 .report-bug-form .static {
-    vertical-align: bottom;
+  vertical-align: bottom;
 }
 
 .report-bug-form input,
 .report-bug-form textarea,
 .report-bug-form select {
-    width: 50%;
-    max-width: 400px;
+  width: 50%;
+  max-width: 400px;
 }
 
 .report-bug-form textarea {
-    resize: both;
+  resize: both;
 }
 
 .report-bug-form label {
-    display: block;
+  display: block;
 }
 
 .report-bug-form label.required:after {
-    color: red;
-    content: "*";
+  color: red;
+  content: "*";
 }
 .report-bug-form label.required {
-    color: inherit;
+  color: inherit;
 }
 
 .report-bug-form .required {
-    color: red;
+  color: red;
 }
 
 .search-bugs {
-    width: 100%;
+  width: 100%;
 }
 
 .search-bugs th,
 .search-bugs td {
-    border-left: none !important;
-    border-right: none !important;
+  border-left: none !important;
+  border-right: none !important;
 }
 
 .search-bugs th {
-    background: #E6E6E6;
-    font-size: 0.95rem;
-    padding-top: 10px !important;
+  background: #E6E6E6;
+  font-size: 0.95rem;
+  padding-top: 10px !important;
 }
 
 .search-bugs .pager th {
-    background: #F2F2F2;
+  background: #F2F2F2;
 }
 
 .search-bugs .pager a[rel="next"] {
-    float: right;
+  float: right;
 }
 
 .search-bugs .pager a[rel="prev"] {
-    float: left;
+  float: left;
 }
 
 .search-bugs .heading th {
-    text-align: left;
+  text-align: left;
 }
 
 .unmod {
-    color: #666;
-    font-style: italic;
+  color: #666;
+  font-style: italic;
 }
 
 /** Bug types **/
 tr.ana td {
-    background: rgba(153, 187, 170, 0.5) !important;
+  background: rgba(153, 187, 170, 0.5) !important;
 }
 tr.ana:hover td {
-    background: rgba(153, 187, 170, 0.4) !important;
+  background: rgba(153, 187, 170, 0.4) !important;
 }
 
 tr.asn td {
-    background: rgba(187, 170, 255, 0.5) !important;
+  background: rgba(187, 170, 255, 0.5) !important;
 }
 tr.asn:hover td {
-    background: rgba(187, 170, 255, 0.4) !important;
+  background: rgba(187, 170, 255, 0.4) !important;
 }
 
 tr.opn td {
-    background: rgba(255, 187, 170, 0.5) !important;
+  background: rgba(255, 187, 170, 0.5) !important;
 }
 tr.opn:hover td {
-    background: rgba(255, 187, 170, 0.4) !important;
+  background: rgba(255, 187, 170, 0.4) !important;
 }
 
 .bug-details th {
-    text-align: right;
-    padding-left: 10px;
-    padding-right: 5px;
+  text-align: right;
+  padding-left: 10px;
+  padding-right: 5px;
 }
 
 #usernotes .note {
-    margin: 0;
+  margin: 0;
 }
 
 #usernotes .note .votes {
-    float: right;
+  float: right;
 }
 
 #usernotes .note .name {
-    margin-left: 0;
+  margin-left: 0;
 }
 
 .bug-header {
-    font-weight: 400;
+  font-weight: 400;
 }
 .bug-header span {
-    font-weight: 500;
+  font-weight: 500;
 }
