@@ -1422,6 +1422,10 @@ tr.sus:hover td {
     margin-left: .75rem;
 }
 
+.report .name.user {
+  font-weight: 500;
+}
+
 .report .date {
     color: #666;
     float: right;
@@ -1434,6 +1438,36 @@ tr.sus:hover td {
   border-radius: 0 0 2px 2px;
   padding: .75rem;
   transition: opacity 0.4s;
+}
+
+/* Comment-specific overrides */
+.report.comment .name {
+  margin-left: 0;
+  font-size: 1rem;
+}
+
+.report.comment .date {
+  font-size: .9rem;
+}
+
+.report.comment .text pre {
+  margin: 0;
+}
+
+.report.comment .changeset {
+  font-family: monospace;
+}
+
+.report.comment .changeset span {
+  display: block;
+}
+
+.report.comment .changeset .added {
+  color: #1aa100;
+}
+
+.report.comment .changeset .removed {
+  color: #de0019;
 }
 
 /* Vote arrow styles. */
