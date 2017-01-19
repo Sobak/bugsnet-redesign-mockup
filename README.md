@@ -18,15 +18,15 @@ Online demo lives [here](http://sobak.pl/php-bugs-mockup). Please mind I update
 it manually so from time to time it might get out of sync with this repository.
 
 ## Screenshots
-Those can be a bit outdated but give general look of this redesign.
+Those can be a bit outdated but give general look&feel of this redesign.
 
 ![Homepage](http://sobak.pl/img/screenshots/RlgdlJXy.png)
 
 ![Reporting bug](http://sobak.pl/img/screenshots/h0KlB23G.png)
 
-![Single bug](http://sobak.pl/img/screenshots/FumRB4Zp.png)
+![Single bug](http://sobak.pl/img/screenshots/FMquEAcZ.png)
 
-![Search bugs](http://sobak.pl/img/screenshots/UbmDoDzb.png)
+![Search bugs](http://sobak.pl/img/screenshots/0jUOng5Q.png)
 
 ## Functional changes
 While this project focuses mainly on design changes, it aims for a few subtle changes in how
@@ -37,7 +37,7 @@ the official discussion on php.net mailing list will happen.
   user experience; dealing with existing votes and their weights remains open question
 - hiding "Developer" tab for non-logged in users and "Add comment" for logged in - just for the
   sake of readability
-- stripping *"Description\n--------"* from the bug content on reading from the database -  no data
+- stripping *"Description\n--------"* from the bug content on the database read -  no data
   migration will be required
 - I'd love to switch for something like ReCaptcha but it's out of scope here perhaps
 - adding client-side search for the *Package affected* select - it seems to be non-controversial
