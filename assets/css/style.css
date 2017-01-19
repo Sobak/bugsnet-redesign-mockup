@@ -1530,6 +1530,41 @@ tr.sus:hover td {
   font-weight: 500;
 }
 
+.controls {
+  font-size: .85rem;
+  float: right;
+  letter-spacing: .1rem;
+  margin-bottom: -10px;
+  text-transform: uppercase;
+  position: relative;
+  top: -55px;
+}
+
+.controls.comments {
+  font-size: .8rem;
+  margin-bottom: -30px;
+}
+
+.controls a {
+  border-bottom: none;
+  color: #444 !important;
+}
+
+.controls span:hover,
+.controls span:hover a,
+.controls span.active,
+.controls span.active a {
+  color: #000 !important;
+  cursor: pointer;
+  font-style: italic;
+}
+
+.controls span {
+  float: left;
+  margin-right: 5px;
+  padding: 2px 5px;
+}
+
 /* {{{ chosen.js overrides */
 .chosen-container-single .chosen-single {
   background: #fff;
