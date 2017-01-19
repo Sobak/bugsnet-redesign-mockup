@@ -1360,19 +1360,10 @@ tr.opn:hover td {
     font-size: 1.125rem;
 }
 
-.report .name em {
-    font-style: normal;
-    font-weight: normal;
-}
-
 .report .date {
     color: #666;
     float: right;
     text-align: right;
-}
-
-.report .date strong {
-    font-weight: normal;
 }
 
 .report .text {
