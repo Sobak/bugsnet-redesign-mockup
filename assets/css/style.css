@@ -1351,13 +1351,14 @@ tr.opn:hover td {
 }
 
 .report .votes {
-    float: right;
+    float: left;
 }
 
 .report .name {
     border-bottom: 0;
     color: #333 !important;
     font-size: 1.125rem;
+    margin-left: .75rem;
 }
 
 .report .date {
@@ -1404,12 +1405,12 @@ tr.opn:hover td {
 
 .report .votes .usernotes-voteu:hover,
 .report .votes .usernotes-voteu:focus {
-    border-bottom: 10px solid #015;
+    border-bottom: 10px solid #015 !important;
 }
 
 .report .votes .usernotes-voted:hover,
 .report .votes .usernotes-voted:focus {
-    border-top: 10px solid #015;
+    border-top: 10px solid #015 !important;
 }
 
 .report .votes .tally {
