@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>PHP: Report a bug</title>
+  <link rel="stylesheet" href="assets/css/fonts.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<nav id="head-nav" class="navbar navbar-fixed-top">
+  <div class="navbar-inner clearfix">
+    <a href="index.html" class="brand"><img src="assets/images/php-logo.svg" width="48" height="24" alt="php">bugs</a>
+    <div id="mainmenu-toggle-overlay"></div>
+    <input type="checkbox" id="mainmenu-toggle">
+    <ul class="nav">
+      <li class="active"><a href="report.html">Report a bug</a></li>
+      <li class=""><a href="search.html">Advanced search</a></li>
+      <li class=""><a href="" >Login</a></li>
+    </ul>
+    <form class="navbar-search" id="topsearch" action="/search.php">
+      <input type="search" name="pattern" class="search-query" placeholder="Search bugs" accesskey="s">
+    </form>
+  </div>
+</nav>
+<div class="headsup"><strong>When reporting security bug, be sure to use <em>Security</em> as a bug type!</strong></div>
+
+<div id="layout" class="clearfix">
+  <section id="layout-content">
+    <h1 class="content-header">Report new bug</h1>
+
+    <p class="warn">
+      PEAR bugs are handled <a href="">separately</a>.
+    </p>
+
+    <form action="" method="post">
+    <table border="0" class="standard report-bug-form">
+      <tr>
+        <th>Logged as</th>
+        <td class="static">sobak@php.net</td>
+      </tr>
+      <tr>
+        <th><label for="type" class="required">Bug type</label></th>
+        <td>
+          <select name="type" id="type" required>
+            <option value='none'>Bug</option>
+            <option value='php'>Doc Bug</option>
+            <option value='pear'>Request</option>
+            <option value='pecl'>Security</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <th><label for="version" class="required">PHP Version</label></th>
+        <td>
+          <select name="version" id="version" required>
+            <option value='none'>-- Please select --</option>
+            <option value='php'>PHP 7.1</option>
+            <option value='pear'>PHP 7.0</option>
+            <option value='pecl'>Irrelevant</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <th><label for="package" class="required">Package affected</label></th>
+        <td>
+          <select name="package" id="package" required>
+            <option value='none'>-- Please select --</option>
+            <option value='php'>PHP Group</option>
+            <option value='pear'>PEAR Group</option>
+            <option value='pecl'>PECL Group</option>
+            <option value='doc'>Doc Group</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <th><label for="os">Operating system<label></th>
+        <td><input type="text" name="os" id="os"></td>
+      </tr>
+      <tr>
+        <th><label for="summary" class="required">Bug title</label></th>
+        <td><input type="text" name="summary" id="summary"></td>
+      </tr>
+      <tr>
+        <th>Note</th>
+        <td>
+          Please supply any information that may be helpful in fixing the bug:
+          <ul>
+            <li>The version number of the PHP package or files you are using.</li>
+            <li>The list of modules you compiled PHP with (your configure line).</li>
+            <li>Any other information unique or specific to your setup.</li>
+            <li>Any changes made in your php.ini compared to php.ini-dist or php.ini-recommended (<strong>not</strong> your whole php.ini!)</li>
+            <li>A <a href="">gdb backtrace</a>.</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <th>
+          <label for="description" class="required">Description</label>
+          <small>Note that there are separate fields for "Test script" and patches.</small>
+        </th>
+        <td><textarea rows="9" name="description" id="description" required></textarea></td>
+      </tr>
+      <tr>
+        <th>
+          <label for="testscript">Test script</label>
+          <small>
+            A short test script you wrote that demonstrates the bug. If the code
+            is longer than 20 lines, provide a URL to the code (e.g. using pastebin).
+          </small>
+        </th>
+        <td><textarea rows="9" name="testscript" id="testscript"></textarea></td>
+      </tr>
+      <tr>
+        <th>
+          <label for="expected">Expected result</label>
+          <small>What do you expect to happen or see when you run the test script above?</small>
+        </th>
+        <td><textarea rows="9" name="expected" id="expected"></textarea></td>
+      </tr>
+      <tr>
+        <th>
+          <label for="actual">Actual result</label>
+          <small>This could be a <a href="">backtrace</a> for example. Try to keep it as short as possible without leaving anything relevant out.</small>
+        </th>
+        <td><textarea rows="9" name="actual" id="actual"></textarea></td>
+      </tr>
+      <tr>
+        <th>
+          <label for="patch">Patch file</label>
+          <small>A patch file created using git diff</small>
+        </th>
+        <td><input type="file" name="patch" id="patch"></td>
+      </tr>
+      <tr>
+        <th><label for="patch_name">Patch name</label></th>
+        <td><input type="text" size="10" name="patch_name" id="patch_name" placeholder="php-bugfix-001.patch"></td>
+      </tr>
+      <tr>
+        <th class="subr">Human test</th>
+        <td><div class="g-recaptcha" data-sitekey="6LfFOBIUAAAAAN7QLELwpEQK_D4a7SZesveoVgTb"></div>
+      </tr>
+      <tr>
+        <th class="buttons" colspan="2"><input type="submit" value="Send bug report"> or <input type="submit" value="Preview"></th>
+      </tr>
+    </table>
+    </form>
+  </section><!-- layout-content -->
+</div><!-- layout -->
+
+<footer>
+  <div class="container footer-content">
+    <div class="row-fluid">
+      <ul class="footmenu">
+        <li><a href="http://php.net/copyright.php">Copyright &copy; 2001-2017 The PHP Group</a></li>
+        <li><a href="http://php.net/sites">Other PHP.net sites</a></li>
+        <li><a href="">Bug Statistics</a></li>
+        <li><a href="">Search Howto</a></li>
+        <li><a href="">Random Bug</a></li>
+        <li class="footer-utc">All timestamps are in UTC</li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="assets/js/jquery.scrollTo.min.js"></script>
+<script src="assets/js/scripts.js"></script>
+
+<a id="toTop" href="javascript:;"><span id="toTopHover"></span><img width="40" height="40" alt="To Top" src="assets/images/to-top@2x.png"></a>
+</body>
+</html>
