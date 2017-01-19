@@ -1270,6 +1270,15 @@ pre.info {
   width: 100%;
 }
 
+.search-bugs a {
+  border-bottom: none;
+}
+
+.search-bugs a:hover {
+  color: #369 !important;
+  border-bottom: 1px solid;
+}
+
 .search-bugs th,
 .search-bugs td {
   border-left: none !important;
@@ -1299,16 +1308,18 @@ pre.info {
   text-align: left;
 }
 
-.unmod {
+.search-bugs .default {
   color: #666;
   font-style: italic;
 }
 
 /** Bug types **/
-tr.ana td {
+tr.ana td,
+tr.ver td {
   background: rgba(153, 187, 170, 0.5) !important;
 }
-tr.ana:hover td {
+tr.ana:hover td,
+tr.ver:hover td {
   background: rgba(153, 187, 170, 0.4) !important;
 }
 
@@ -1319,11 +1330,69 @@ tr.asn:hover td {
   background: rgba(187, 170, 255, 0.4) !important;
 }
 
+tr.csd td {
+  background: rgba(170, 255, 187, 0.5) !important;
+}
+tr.csd:hover td {
+  background: rgba(170, 255, 187, 0.4) !important;
+}
+
+tr.ctl td {
+  background: rgba(255, 0, 0, 0.5) !important;
+}
+tr.ctl:hover td {
+  background: rgba(255, 0, 0, 0.4) !important;
+}
+
+tr.dup td {
+  background: rgba(187, 187, 187, 0.5) !important;
+}
+tr.dup:hover td {
+  background: rgba(187, 187, 187, 0.4) !important;
+}
+
+tr.fbk td {
+  background: rgba(187, 238, 255, 0.5) !important;
+}
+tr.fbk:hover td {
+  background: rgba(187, 238, 255, 0.4) !important;
+}
+
+tr.nab td,
+tr.wfx td {
+  background: rgba(170, 170, 170, 0.5) !important;
+}
+tr.nab:hover td,
+tr.wfx:hover td {
+  background: rgba(170, 170, 170, 0.4) !important;
+}
+
+tr.nof td {
+  background: rgba(187, 255, 204, 0.5) !important;
+}
+tr.nof:hover td {
+  background: rgba(187, 255, 204, 0.4) !important;
+}
+
 tr.opn td {
   background: rgba(255, 187, 170, 0.5) !important;
 }
 tr.opn:hover td {
   background: rgba(255, 187, 170, 0.4) !important;
+}
+
+tr.reo td {
+  background: rgba(255, 170, 187, 0.5) !important;
+}
+tr.reo:hover td {
+  background: rgba(255, 170, 187, 0.4) !important;
+}
+
+tr.sus td {
+  background: rgba(255, 204, 187, 0.5) !important;
+}
+tr.sus:hover td {
+  background: rgba(255, 204, 187, 0.4) !important;
 }
 
 .bug-details th {
