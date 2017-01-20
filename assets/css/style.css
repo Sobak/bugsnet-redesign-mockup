@@ -279,10 +279,7 @@ body, input, textarea {
     font-family: "Fira Sans", "Source Sans Pro", Helvetica, Arial, sans-serif;
   font-weight: 400;
 }
-code,
-pre.info,
-.docs .classsynopsis,
-.docs .classsynopsis code {
+code {
   font: normal 0.875rem/1.5rem "Fira Mono", "Source Code Pro", monospace; 
   word-wrap: break-word;
 }
@@ -413,18 +410,6 @@ hr {
 dl dd {
     margin:0 0 1.5rem;
     padding:0 1.5rem;
-}
-
-.warn {
-    padding: .75rem 1rem;
-    margin: 1.5rem 0 1.5rem 1.5rem;
-    border-top: .1875rem solid;
-}
-
-pre.info {
-    border: 1px solid;
-    margin: 1rem 2rem 1.3rem;
-    margin-right: 0.8rem;
 }
 
 #langform {
@@ -625,46 +610,6 @@ header.title {
     text-align:center;
 }
 
-/* {{{ Warning and notes */
-
-div.tip,
-div.warning,
-div.caution,
-blockquote.note {
-  padding: .75rem;
-  margin: 1.5rem 0;
-  overflow: hidden
-}
-
-blockquote.note strong.note {
-  font-size: 1.125rem;
-}
-div.tip strong.tip,
-div.warning strong.warning,
-div.caution strong.caution {
-  float: left;
-  margin-right: 0.5rem;
-  font-size: 1.125rem;
-}
-blockquote.note p,
-div.caution p,
-div.warning p,
-div.tip p {
-   margin: 1.5rem 0 0;
-}
-blockquote.note *:first-child + p,
-div.caution *:first-child + p,
-div.warning *:first-child + p,
-div.tip *:first-child + p,
-blockquote.note p:first-child,
-div.caution p:first-child,
-div.warning p:first-child,
-div.tip p:first-child {
-   margin: 0;
-}
-
-/* }}} */
-
 #breadcrumbs {
   -moz-box-sizing:border-box;
   box-sizing:border-box;
@@ -840,12 +785,6 @@ div.tip p:first-child {
     /* This just has to be big enough to cover whatever's in .nav. */
     max-height: 50rem;
   }
-
-  #flash-message {
-    margin-top: 0px !important;
-    top: 0;
-  }
-
 }
 
 @media (min-width:768px) {
@@ -869,33 +808,6 @@ div.tip p:first-child {
     padding-right:0;
   }
 }
-
-
-/* {{{ Flash message */
-#flash-message {
-  height: auto;
-  margin-top: 4px;
-  position: fixed;
-  width: 100%;
-  z-index: 95;
-  text-align: center;
-  box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.1);
-}
-
-#flash-message .message {
-  cursor: pointer;
-  text-align: center;
-  position: relative;
-  border-bottom:1px solid;
-  padding:.25rem;
-}
-
-#flash-message .message a {
-  border-style: dotted;
-  font-weight: bolder;
-}
-/* }}} */
-
 
 /* vim: set ts=2 sw=2 et: */
 /***********************************
@@ -980,65 +892,6 @@ ol {
 }
 
 
-/* {{{ Warnings, Tips and Notes */
-#flash-message .success {
-  background:#E6F2D9;
-  border-color: #CCE6B3;
-}
-#flash-message .info,
-div.tip {
-  background:#D9E6F2;
-  border-color: #B3CCE6;
-  border-bottom-color:#9FBFDF;
-}
-blockquote.note {
-  background-color: #E6E6E6;
-  border-color: #ccc;
-}
-div.caution {
-  background: #fcfce9;
-  border-color: #e2e2d1;
-}
-.refsect1 blockquote.note {
-  margin-left:0;
-  background:#fff;
-  border-color: #e5e6e9;
-}
-#flash-message .error,
-div.warning {
-  background:#F4DFDF;
-  border-color: #EABFBF;
-}
-
-.docs .classsynopsis,
-.refsect1 .fieldsynopsis,
-.refsect1 .dc-description,
-.docs .sect1 .dc-description,
-div.tip,
-blockquote.note,
-div.caution,
-div.warning {
-  box-shadow:inset 0 0 0 1px rgba(0,0,0,.15);
-  border-radius:0 0 2px 2px;
-}
-#flash-message .error a,
-div.warning a:link,
-div.warning a:visited,
-div.warning h2,
-div.warning h3 {
-  color:#936;
-}
-#flash-message .success a,
-#flash-message a:hover,
-#flash-message a:focus,
-div.warning a:hover,
-div.warning a:focus {
-  color:#693;
-  border-color:#693;
-}
-/* }}} */
-
-
 /* {{{ Navbar */
 .navbar .nav > li > a:focus,
 .navbar .nav > li > a:hover {
@@ -1118,18 +971,6 @@ div.warning a:focus {
 }
 /* }}} */
 
-
-.warn {
-  border-color: #4F5B93;
-  background-color: #fff;
-  border-radius: 0 0 2px 2px;
-}
-
-pre.info {
-  background-color: #efefef;
-  border-color: #ddd;
-}
-
 /* {{{ Breadcrumbs */
 #breadcrumbs {
     color: #999;
@@ -1139,8 +980,7 @@ pre.info {
 .headsup {
   padding:.25rem 0;
   height:1.5rem;
-  border-bottom:.125rem solid #696;
-  background-color: #9c9;
+  border-bottom:.125rem solid;
   color:#fff;
 }
 
@@ -1149,6 +989,16 @@ pre.info {
   margin: 0 auto;
   text-align: center;
   color: #fff;
+}
+
+.headsup.success {
+  background-color: #9c9;
+  border-color: #696;
+}
+
+.headsup.error {
+  background:#802626;
+  border-color: #520;
 }
 
 /* vim: set ts=2 sw=2 et: */
