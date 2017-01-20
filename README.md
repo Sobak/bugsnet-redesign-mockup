@@ -38,6 +38,16 @@ My idea is to change them to be simple yes/no vote. It drastically improves UX. 
 decide upon migration path for current votes, though. There are two types of them, as far as
 I can see and importance has its weight what wouldn't be a case with proposed simpler approach.
 
+### Show attatched patches and pull requests as comments
+Since we have filters available for the bug comments' section finding them shouldn't be an issue.
+My proposal is to change categories from "Git/SVN Commits" to "Commits/Patches" and "Related reports"
+to "Related", including related pull requests.
+
+When it comes to the migration: it seems that database table for patches contains all required data
+so it should be achieveable with simple `UNION` with comments table. Pull requests are lacking time
+they were added in, so my proposal is to add the field, set its value to current date for existing
+attatchments and of course set it on new records creation. It shouldn't cause many troubles, IMO.
+
 ### Simplifying bug content itself
 Currently values of *Description*, *Test script*, *Expected result* and *Actual result* form
 fields are all concatenated into one database field. I'd like to strip the first part:

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>PHP: View patch</title>
+  <link rel="stylesheet" href="assets/css/fonts.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<nav id="head-nav" class="navbar navbar-fixed-top">
+  <div class="navbar-inner clearfix">
+    <a href="index.html" class="brand"><img src="assets/images/php-logo.svg" width="48" height="24" alt="php">bugs</a>
+    <div id="mainmenu-toggle-overlay"></div>
+    <input type="checkbox" id="mainmenu-toggle">
+    <ul class="nav">
+      <li class=""><a href="report.html">Report a bug</a></li>
+      <li class=""><a href="search.html">Advanced search</a></li>
+      <li class=""><a href="" >Login</a></li>
+    </ul>
+    <form class="navbar-search" id="topsearch" action="/search.php">
+      <input type="search" name="pattern" class="search-query" placeholder="Search bugs" accesskey="s">
+    </form>
+  </div>
+</nav>
+
+<div id="layout" class="clearfix">
+  <section id="layout-content">
+    <h1 class="content-header bug-header"><span>Patch</span> fix_lang_selector.patch</h1>
+    <div class="controls">
+      <span><a href="">Download</a></span>
+      <span><a href="bug.html">Back to #67629</a></span>
+    </div>
+    <div class="report" id="report">
+      <a href="https://bugs.php.net/bug.php?id=67629" class="name">lester at lsces dot co dot uk</a>
+      <a class="genanchor" href="#report"> &para;</a>
+      <time class="date" datetime="2014-07-16T14:28:00+02:00">2014-07-16 12:28</time>
+
+      <div class="text">
+        <pre>diff --git a/ext/hash/hash_sha3.c b/ext/hash/hash_sha3.c
+index d6eb1a0f39..d190ae430b 100644
+--- a/ext/hash/hash_sha3.c
++++ b/ext/hash/hash_sha3.c
+@@ -16,6 +16,7 @@
+    +----------------------------------------------------------------------+
+ */
+ 
++#include &quot;php_hash.h&quot;
+ #include &quot;php_hash_sha3.h&quot;
+ 
+ #if (defined(__APPLE__) || defined(__APPLE_CC__)) &amp;&amp; \
+diff --git a/ext/hash/php_hash_sha3.h b/ext/hash/php_hash_sha3.h
+index e16ff214dd..8b70ef4a7e 100644
+--- a/ext/hash/php_hash_sha3.h
++++ b/ext/hash/php_hash_sha3.h
+@@ -20,7 +20,6 @@
+ #define PHP_HASH_SHA3_H
+ 
+ #include &quot;php.h&quot;
+-#include &quot;ext/hash/php_hash.h&quot;
+ 
+ typedef struct {
+        unsigned char state[200]; // 5 * 5 * sizeof(uint64)</pre>
+      </div>
+    </div>
+
+    <h3 class="content-header">Previous revisions</h3>
+    <p>Probably makes sense here...</p>
+
+  </section><!-- layout-content -->
+</div><!-- layout -->
+
+<footer>
+  <div class="container footer-content">
+    <div class="row-fluid">
+      <ul class="footmenu">
+        <li><a href="http://php.net/copyright.php">Copyright &copy; 2001-2017 The PHP Group</a></li>
+        <li><a href="http://php.net/sites">Other PHP.net sites</a></li>
+        <li><a href="">Bug Statistics</a></li>
+        <li><a href="">Search Howto</a></li>
+        <li><a href="">Random Bug</a></li>
+        <li class="footer-utc">All timestamps are in UTC</li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="assets/js/jquery.scrollTo.min.js"></script>
+<script src="assets/js/scripts.js"></script>
+
+<a id="toTop" href="javascript:;"><span id="toTopHover"></span><img width="40" height="40" alt="To Top" src="assets/images/to-top@2x.png"></a>
+</body>
+</html>

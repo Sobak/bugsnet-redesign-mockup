@@ -1436,6 +1436,7 @@ tr.sus:hover td {
   background-color: #FFF;
   box-shadow: inset 0 0 0 1px rgba(0,0,0,.15);
   border-radius: 0 0 2px 2px;
+  font-family: monospace;
   padding: .75rem;
   transition: opacity 0.4s;
 }
@@ -1452,10 +1453,6 @@ tr.sus:hover td {
 
 .report.comment .text pre {
   margin: 0;
-}
-
-.report.comment .changeset {
-  font-family: monospace;
 }
 
 .report.comment .changeset span {
