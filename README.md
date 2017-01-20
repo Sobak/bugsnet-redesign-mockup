@@ -33,12 +33,24 @@ While this project focuses mainly on design changes, it aims for a few subtle ch
 the bugtracker works as well. This section notes them so that everything should be clear when
 the official discussion on php.net mailing list will happen.
 
-- simplifying bug votes: I suggest changing it to simple yes/no vote for both simpler design and
-  user experience; dealing with existing votes and their weights remains open question
-- hiding "Developer" tab for non-logged in users and "Add comment" for logged in - just for the
-  sake of readability
-- stripping *"Description\n--------"* from the bug content on the database read -  no data
-  migration will be required
-- I'd love to switch for something like ReCaptcha but it's out of scope here perhaps
-- adding client-side search for the *Package affected* select - it seems to be non-controversial
-  though
+### Simplifying bug votes
+My idea is to change them to be simple yes/no vote. It drastically improves UX. We need to
+decide upon migration path for current votes, though. There are two types of them, as far as
+I can see and importance has its weight what wouldn't be a case with proposed simpler approach.
+
+### Simplifying bug content itself
+Currently values of *Description*, *Test script*, *Expected result* and *Actual result* form
+fields are all concatenated into one database field. I'd like to strip the first part:
+```
+Description
+-----------
+```
+
+but I propose to do this on read so no data migration will be required.
+
+### Hide "Developer" tab for unauthenticated users
+Not so important and adds one more click so I won't fight for it too much. Just a suggestion.
+It would simplify interface and the code as well, though.
+
+### Client-side search/autocompletion for "Package affected" field
+It's rather self-explanatory and non-controversial, I think.
