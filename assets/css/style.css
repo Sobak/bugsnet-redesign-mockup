@@ -959,13 +959,13 @@ ol {
 
 
 /* {{{ The anchor for section headers */
-#layout-content a.genanchor:link,
-#layout-content a.genanchor:visited {
+a.genanchor:link,
+a.genanchor:visited {
     color: transparent;
     border-bottom: none;
 }
-#layout-content a.genanchor:hover,
-#layout-content a.genanchor:focus {
+a.genanchor:hover,
+a.genanchor:focus {
     color: #333;
     border-bottom: none;
 }
