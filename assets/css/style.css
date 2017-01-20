@@ -473,11 +473,16 @@ body > footer .footmenu li {
   display: inline-block;
   margin:0 0.75rem;
 }
-body > footer a {
+body > footer a:link,
+body > footer a:visited {
+  color: #ccc;
   display:inline-block;
   border-bottom:0;
 }
 
+body > footer a:hover {
+  color: #AE508D;
+}
 
 /* Standard Tables */
 
@@ -730,35 +735,17 @@ div.tip p:first-child {
   }
 }
 
-
-
-@media (min-width: 768px) and (max-width: 979px) {
-    #intro .download, aside.tips, .navbar-search {
-        width: 30% !important;
-    }
-
-    #intro .blurb, #layout-content {
-        width: 70% !important;
-    }
-}
-
 @media (min-width: 1200px) {
-  #intro .container,
   .navbar-inner,
   #breadcrumbs-inner,
-  #goto div,
-  #trick div,
   #layout,
   body > footer .footer-content {
     width:1170px;
   }
 }
 @media (min-width: 1500px) {
-  #intro .container,
   .navbar-inner,
   #breadcrumbs-inner,
-  #goto div,
-  #trick div,
   #layout, 
   body > footer .footer-content {
     width:1440px;
@@ -784,10 +771,6 @@ div.tip p:first-child {
   
   .navbar .nav {
     margin-right: 0;
-  }
-  
-  #intro .download-php { 
-    margin: 0 !important; 
   }
 
   #mainmenu-toggle-overlay {
@@ -877,11 +860,6 @@ div.tip p:first-child {
   }
 }
 
-@media (max-width: 979px) and (min-width: 768px) {
-  #intro .download-php a.btn-pop {
-    padding-right:.375rem;
-  }
-}
 @media (min-width:980px) {
 }
 @media (min-width:1200px) {
@@ -975,21 +953,15 @@ h3:after {
 
 a:link,
 a:visited {
-  color: #ccc;
-}
-#layout-content a:link,
-#layout-content a:visited {
   color: #369;
 }
+
 a:hover,
-a:focus,
-#layout-content a:hover,
-#layout-content a:focus {
+a:focus {
   color: #AE508D;
   border-color: #AE508D;
   outline:0;
 }
-
 
 ul {
   list-style-type: disc;
@@ -1132,34 +1104,6 @@ div.warning a:focus {
 
 /* }}} */
 
-/* {{{ Tables */
-.doctable,
-.segmentedlist {
-  border-color: #ccc;
-}
-.doctable thead tr,
-.segmentedlist thead tr {
-  border-color: #C4C9DF;
-  border-bottom-color: #8892BF;
-  color: #333;
-}
-.doctable th,
-.segmentedlist th {
-  background-color: #C4C9DF;
-}
-.doctable tr,
-.segmentedlist tr {
-  border-color: #ccc
-}
-.doctable tbody tr:nth-child(odd),
-.segmentedlist tbody tr:nth-child(odd) {
-  background-color: #ffffff;
-}
-.doctable tbody tr:nth-child(even),
-.segmentedlist tbody tr:nth-child(even) {
-  background-color: #E6E6E6;
-}
-/* }}} */
 
 /* {{{ The anchor for section headers */
 #layout-content a.genanchor:link,
@@ -1275,8 +1219,8 @@ pre.info {
 }
 
 .search-bugs a:hover {
-  color: #369 !important;
-  border-bottom: 1px solid #369 !important;
+  color: #369;
+  border-bottom: 1px solid #369;
 }
 
 .search-bugs th,
@@ -1314,92 +1258,92 @@ pre.info {
 }
 
 /** Bug types **/
-tr.ana td,
-tr.ver td {
-  background: rgba(153, 187, 170, 0.5) !important;
+table.search-bugs tr.ana td,
+table.search-bugs tr.ver td {
+  background: rgba(153, 187, 170, 0.5);
 }
-tr.ana:hover td,
-tr.ver:hover td {
-  background: rgba(153, 187, 170, 0.4) !important;
-}
-
-tr.asn td {
-  background: rgba(187, 170, 255, 0.5) !important;
-}
-tr.asn:hover td {
-  background: rgba(187, 170, 255, 0.4) !important;
+table.search-bugs tr.ana:hover td,
+table.search-bugs tr.ver:hover td {
+  background: rgba(153, 187, 170, 0.4);
 }
 
-tr.csd td {
-  background: rgba(170, 255, 187, 0.5) !important;
+table.search-bugs tr.asn td {
+  background: rgba(187, 170, 255, 0.5);
 }
-tr.csd:hover td {
-  background: rgba(170, 255, 187, 0.4) !important;
-}
-
-tr.ctl td {
-  background: rgba(255, 0, 0, 0.5) !important;
-}
-tr.ctl:hover td {
-  background: rgba(255, 0, 0, 0.4) !important;
-}
-tr.ctl td a {
-  color: #333 !important;
-}
-tr.ctrl td a:hover {
-  border-bottom: 1px solid #333 !important;
-  color: #333 !important;
+table.search-bugs tr.asn:hover td {
+  background: rgba(187, 170, 255, 0.4);
 }
 
-tr.dup td {
-  background: rgba(187, 187, 187, 0.5) !important;
+table.search-bugs tr.csd td {
+  background: rgba(170, 255, 187, 0.5);
 }
-tr.dup:hover td {
-  background: rgba(187, 187, 187, 0.4) !important;
-}
-
-tr.fbk td {
-  background: rgba(187, 238, 255, 0.5) !important;
-}
-tr.fbk:hover td {
-  background: rgba(187, 238, 255, 0.4) !important;
+table.search-bugs tr.csd:hover td {
+  background: rgba(170, 255, 187, 0.4);
 }
 
-tr.nab td,
-tr.wfx td {
-  background: rgba(170, 170, 170, 0.5) !important;
+table.search-bugs tr.ctl td {
+  background: rgba(255, 0, 0, 0.5);
 }
-tr.nab:hover td,
-tr.wfx:hover td {
-  background: rgba(170, 170, 170, 0.4) !important;
+table.search-bugs tr.ctl:hover td {
+  background: rgba(255, 0, 0, 0.4);
 }
-
-tr.nof td {
-  background: rgba(187, 255, 204, 0.5) !important;
+table.search-bugs tr.ctl td a {
+  color: #333;
 }
-tr.nof:hover td {
-  background: rgba(187, 255, 204, 0.4) !important;
+table.search-bugs tr.ctrl td a:hover {
+  border-bottom: 1px solid #333;
+  color: #333;
 }
 
-tr.opn td {
-  background: rgba(255, 187, 170, 0.5) !important;
+table.search-bugs tr.dup td {
+  background: rgba(187, 187, 187, 0.5);
 }
-tr.opn:hover td {
-  background: rgba(255, 187, 170, 0.4) !important;
-}
-
-tr.reo td {
-  background: rgba(255, 170, 187, 0.5) !important;
-}
-tr.reo:hover td {
-  background: rgba(255, 170, 187, 0.4) !important;
+table.search-bugs tr.dup:hover td {
+  background: rgba(187, 187, 187, 0.4);
 }
 
-tr.sus td {
-  background: rgba(255, 204, 187, 0.5) !important;
+table.search-bugs tr.fbk td {
+  background: rgba(187, 238, 255, 0.5);
 }
-tr.sus:hover td {
-  background: rgba(255, 204, 187, 0.4) !important;
+table.search-bugs tr.fbk:hover td {
+  background: rgba(187, 238, 255, 0.4);
+}
+
+table.search-bugs tr.nab td,
+table.search-bugs tr.wfx td {
+  background: rgba(170, 170, 170, 0.5);
+}
+table.search-bugs tr.nab:hover td,
+table.search-bugs tr.wfx:hover td {
+  background: rgba(170, 170, 170, 0.4);
+}
+
+table.search-bugs tr.nof td {
+  background: rgba(187, 255, 204, 0.5);
+}
+table.search-bugs tr.nof:hover td {
+  background: rgba(187, 255, 204, 0.4);
+}
+
+table.search-bugs tr.opn td {
+  background: rgba(255, 187, 170, 0.5);
+}
+table.search-bugs tr.opn:hover td {
+  background: rgba(255, 187, 170, 0.4);
+}
+
+table.search-bugs tr.reo td {
+  background: rgba(255, 170, 187, 0.5);
+}
+table.search-bugs tr.reo:hover td {
+  background: rgba(255, 170, 187, 0.4);
+}
+
+table.search-bugs tr.sus td {
+  background: rgba(255, 204, 187, 0.5);
+}
+table.search-bugs tr.sus:hover td {
+  background: rgba(255, 204, 187, 0.4);
 }
 
 .bug-details th {
@@ -1424,7 +1368,7 @@ tr.sus:hover td {
 
 .report .name {
     border-bottom: 0;
-    color: #333 !important;
+    color: #333;
     font-size: 1.125rem;
     margin-left: .75rem;
 }
@@ -1544,21 +1488,30 @@ tr.sus:hover td {
   top: -55px;
 }
 
+@media (max-width: 767px) {
+  /* @fixme controls for the history disappear completely */
+  .controls {
+    float: none;
+    position: static;
+  }
+}
+
 .controls.comments {
   font-size: .8rem;
   margin-bottom: -30px;
 }
 
-.controls a {
+.controls a,
+.controls span {
   border-bottom: none;
-  color: #444 !important;
+  color: #444;
 }
 
 .controls span:hover,
 .controls span:hover a,
 .controls span.active,
 .controls span.active a {
-  color: #000 !important;
+  color: #000;
   cursor: pointer;
   font-style: italic;
 }
