@@ -1276,7 +1276,7 @@ pre.info {
 
 .search-bugs a:hover {
   color: #369 !important;
-  border-bottom: 1px solid;
+  border-bottom: 1px solid #369 !important;
 }
 
 .search-bugs th,
@@ -1342,6 +1342,13 @@ tr.ctl td {
 }
 tr.ctl:hover td {
   background: rgba(255, 0, 0, 0.4) !important;
+}
+tr.ctl td a {
+  color: #333 !important;
+}
+tr.ctrl td a:hover {
+  border-bottom: 1px solid #333 !important;
+  color: #333 !important;
 }
 
 tr.dup td {
