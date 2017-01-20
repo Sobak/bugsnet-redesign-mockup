@@ -33,7 +33,24 @@ $(document).ready(function() {
           toTop.fadeOut(settings.outDelay);
           toTopHidden = true;
         }
-      });   
+      });
+
+      // Comments filtering
+      $('.controls.comments span').click(function () {
+        $('.controls.comments span.active').removeClass('active');
+        $(this).addClass('active');
+
+        type = $(this).data('type');
+
+        if (type == 'all') {
+          $('.report.comment:hidden').show('slow');
+        } else {
+          $('.report.comment').each(function (i) {
+            e = $(this);
+            e.data('type') == type ? e.show('slow') : e.hide('slow');
+          });
+        }
+      });
 
     })();
 

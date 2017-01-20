@@ -48,6 +48,10 @@ so it should be achieveable with simple `UNION` with comments table. Pull reques
 they were added in, so my proposal is to add the field, set its value to current date for existing
 attatchments and of course set it on new records creation. It shouldn't cause many troubles, IMO.
 
+### Remembering last selected comment filter is removed
+Currently bugs.php.net remembers last selected type of bug comments to filter, using cookies. This
+feature is missing in this project but if anyone thinks it's useful it can be reimplemented.
+
 ### Simplifying bug content itself
 Currently values of *Description*, *Test script*, *Expected result* and *Actual result* form
 fields are all concatenated into one database field. I'd like to strip the first part:
