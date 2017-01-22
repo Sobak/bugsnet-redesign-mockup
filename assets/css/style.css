@@ -1221,6 +1221,12 @@ table.search-bugs tr.sus:hover td {
     position: relative;
 }
 
+.report:before {
+    content: '';
+    display: block;
+    clear: both;
+}
+
 .report .votes {
     float: left;
 }
