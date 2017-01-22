@@ -1001,6 +1001,15 @@ a.genanchor:focus {
   border-color: #520;
 }
 
+.warn {
+  padding: .75rem 1rem;
+  margin: 1.5rem 0;
+  border-top: .1875rem solid;
+  border-color: #4F5B93;
+  background-color: #fff;
+  border-radius: 0 0 2px 2px;
+}
+
 /* vim: set ts=2 sw=2 et: */
 
  /***********************************
