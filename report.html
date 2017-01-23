@@ -496,11 +496,11 @@
       </tr>
       <tr>
         <th><label for="patch_name">Patch name</label></th>
-        <td><input type="text" size="10" name="patch_name" id="patch_name" placeholder="php-bugfix-001.patch"></td>
+        <td><input type="text" name="patch_name" id="patch_name" placeholder="php-bugfix-001.patch"></td>
       </tr>
       <tr>
-        <th class="subr">Human test</th>
-        <td><div class="g-recaptcha" data-sitekey="6LfFOBIUAAAAAN7QLELwpEQK_D4a7SZesveoVgTb"></div>
+        <th><label for="captcha" class="required">Human test</label></th>
+        <td><span class="captcha-question">20 + 15 = </span><input type="text" name="captcha" id="captcha"></td>
       </tr>
       <tr>
         <th class="buttons" colspan="2"><input type="submit" value="Send bug report"> or <input type="submit" value="Preview"></th>

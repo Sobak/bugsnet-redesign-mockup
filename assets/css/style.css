@@ -1067,6 +1067,14 @@ a.genanchor:focus {
   color: red;
 }
 
+.captcha-question {
+  font-size: 1.125rem;
+}
+
+input[name="captcha"] {
+  width: 40%;
+}
+
 .search-bugs {
   font-size: .9rem;
   line-height: 1.25rem;
