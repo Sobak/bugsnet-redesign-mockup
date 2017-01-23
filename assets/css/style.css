@@ -1368,17 +1368,26 @@ table.search-bugs tr.sus:hover td {
   top: -55px;
 }
 
-@media (max-width: 767px) {
-  /* @fixme controls for the history disappear completely */
+@media (max-width: 1024px) {
   .controls {
     float: none;
-    position: static;
+    top: -25px;
+  }
+
+  .bug-details {
+    clear: both;
   }
 }
 
 .controls.comments {
   font-size: .8rem;
   margin-bottom: -30px;
+}
+
+.controls span {
+  float: left;
+  margin-right: 0.35rem;
+  padding: 2px 5px;
 }
 
 .controls a,
@@ -1394,12 +1403,6 @@ table.search-bugs tr.sus:hover td {
   color: #000;
   cursor: pointer;
   font-style: italic;
-}
-
-.controls span {
-  float: left;
-  margin-right: 5px;
-  padding: 2px 5px;
 }
 
 /* {{{ chosen.js overrides */
