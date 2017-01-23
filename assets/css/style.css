@@ -954,6 +954,10 @@ a.genanchor:focus {
  /***********************************
  * Custom overrides for bugs.php.net
  **********************************/
+p + ul {
+  margin-top: -0.75rem;
+}
+
 .footer-utc {
   float: right;
   font-style: italic;  
