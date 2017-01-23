@@ -1198,6 +1198,13 @@ table.search-bugs tr.reo:hover td {
   background: rgba(255, 170, 187, 0.4);
 }
 
+table.search-bugs tr.sec td {
+  background: rgba(181, 199, 205, 0.5);
+}
+table.search-bugs tr.sec:hover td {
+  background: rgba(181, 199, 205, 0.4);
+}
+
 table.search-bugs tr.sus td {
   background: rgba(255, 204, 187, 0.5);
 }
