@@ -412,11 +412,6 @@ dl dd {
     padding:0 1.5rem;
 }
 
-#langform {
-    float: right;
-}
-
-
 #layout {
     margin: 0 auto 1.5rem;
     clear:both;
@@ -470,7 +465,6 @@ body > footer a:hover {
 }
 
 /* Standard Tables */
-
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -610,40 +604,6 @@ header.title {
     text-align:center;
 }
 
-#breadcrumbs {
-  -moz-box-sizing:border-box;
-  box-sizing:border-box;
-  padding:.75rem 0;
-  font-size:.875rem;
-  display:none;
-}
-#breadcrumbs #breadcrumbs-inner {
-  margin:0 auto;
-}
-#breadcrumbs ul {
-    margin:0;
-    padding:0 .5rem 0 1.5rem;
-    overflow: hidden;
-}
-#breadcrumbs-inner div {
-    padding:0 1.5rem;
-}
-#breadcrumbs li {
-    display:inline-block;
-}
-#breadcrumbs li+li:before {
-    padding:0 .5rem 0;
-    content:"\203A";
-}
-#breadcrumbs a:link,
-#breadcrumbs a:visited {
-    border-width:0;
-}
-
-#breadcrumbs .next,
-#breadcrumbs .prev {
-  float:right;
-}
 @media (min-width: 768px) {
 
   .navbar-fixed-top {
@@ -655,22 +615,12 @@ header.title {
   body {
     margin:3.25rem 0 0;
   }
-  #breadcrumbs {
-    display:block;
-  }
   .navbar-search,
-  #intro .download,
-  #intro .background,
-  aside.tips,
   .layout-menu {
     width: 25%;
     float: left;
   }
 
-  #intro .blurb, #layout-content {
-    float:left;
-    width:75%;
-  }
   .navbar-fixed-top {
     position: fixed;
     right: 0;
@@ -682,7 +632,6 @@ header.title {
 
 @media (min-width: 1200px) {
   .navbar-inner,
-  #breadcrumbs-inner,
   #layout,
   body > footer .footer-content {
     width:1170px;
@@ -690,7 +639,6 @@ header.title {
 }
 @media (min-width: 1500px) {
   .navbar-inner,
-  #breadcrumbs-inner,
   #layout, 
   body > footer .footer-content {
     width:1440px;
@@ -793,9 +741,6 @@ header.title {
   }
   .navbar-search .search-query {
     width:100%;
-  }
-  #intro .container {
-    position:relative;
   }
 }
 
@@ -968,12 +913,6 @@ a.genanchor:hover,
 a.genanchor:focus {
     color: #333;
     border-bottom: none;
-}
-/* }}} */
-
-/* {{{ Breadcrumbs */
-#breadcrumbs {
-    color: #999;
 }
 /* }}} */
 
@@ -1298,7 +1237,7 @@ table.search-bugs tr.sus:hover td {
   color: #de0019;
 }
 
-/* Vote arrow styles. */
+/* Vote arrow styles */
 .report .votes > div:first-child {
     float: left;
 }
